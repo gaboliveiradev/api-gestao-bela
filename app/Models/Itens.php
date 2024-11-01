@@ -8,22 +8,19 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Establishment extends Authenticatable
+class Itens extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $table = 'establishments';
+    protected $table = 'itens';
 
     protected $fillable = [
+        'name',
         'description',
+        'price',
+        'promotional_price',
+        'img_url',
         'type',
-        'zip_code',
-        'street',
-        'district',
-        'number',
-        'city',
-        'state',
-        'complement',
         'deleted_at',
     ];
 }
